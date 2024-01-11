@@ -31,7 +31,7 @@
 
     // Create the popup HTML structure
     var popupHtml = `
-        <div id="popup" class="popup">
+        <div id="popupDelanswer" class="popup">
             <div class="popup-content">
                 <p class="noBottomP">Answer deleted</p>
             </div>
@@ -44,7 +44,7 @@
     // CSS styles
     var style = document.createElement('style');
     style.innerHTML = `
-    #popup {
+    #popupDelanswer {
     display: none;
     position: fixed;
     top: 20px;
@@ -80,7 +80,7 @@
     }
 }
 
-#popup .popup-content {
+#popupDelanswer .popup-content {
     text-align: center;
 }
 
@@ -94,12 +94,12 @@
 
     // JavaScript functions
     window.showPopup = function() {
-        var popup = document.getElementById("popup");
+        var popup = document.getElementById("popupDelanswer");
         popup.style.display = "block";
     };
 
     window.closePopup = function() {
-        var popup = document.getElementById("popup");
+        var popup = document.getElementById("popupDelanswer");
         popup.style.animation = "fadeOut 0.5s ease-in-out";
         setTimeout(() => {
             popup.style.display = "none";
